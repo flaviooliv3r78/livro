@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faísca, o Ratinho Mochileiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-image">
+        <img src="img/principal.jpeg" alt="Faísca, o Ratinho Mochileiro">
+    </div>
+
+    <style>
+        /* Container da imagem principal */
+        .main-image {
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px;
+            /* Ajuste o tamanho conforme necessário */
+            margin: 0 auto;
+            /* Centraliza a imagem */
+        }
+
+        /* Efeito de zoom e flutuação na imagem */
+        .main-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 3s ease;
+            /* Suavidade do efeito */
+            animation: floating 6s ease-in-out infinite, zoom 15s ease-in-out infinite;
+        }
+
+        /* Zoom */
+        .main-image img:hover {
+            transform: scale(1.1);
+            /* Aumenta a imagem ao passar o mouse */
+        }
+
+        /* Animação de flutuação */
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+                /* Sobe 10 pixels no meio da animação */
+            }
+        }
+
+        /* Animação de zoom suave */
+        @keyframes zoom {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+                /* Aumenta um pouco no meio da animação */
+            }
+        }
+    </style>
+
+
+    <!-- Cabeçalho com título e CTA -->
+    <header class="hero">
+        <img src="img/principal.jpeg" alt="Capa do livro Faísca, o Ratinho Mochileiro">
+        <h1>Faísca, o Ratinho Mochileiro</h1>
+        <p>Uma aventura emocionante para crianças e adultos</p>
+        <button class="cta-button">Compre Agora</button>
+    </header>
+
+    <!-- Seção de Introdução -->
+    <section class="introduction fade-in-section">
+        <h2>Conheça Faísca, o ratinho aventureiro</h2>
+        <p>Faísca é um ratinho curioso e cheio de coragem. Ele não quer viver a vida simples da fazenda...</p>
+        <img src="img/parte 2.jpeg" alt="Faísca com sua mochila">
+    </section>
+
+    <!-- Seção de Destaques da História -->
+    <section class="highlights fade-in-section">
+        <div class="highlight">
+            <h3>Faísca de Castigo</h3>
+            <p>Mesmo depois de levar uma bronca e ficar de castigo, Faísca não perdeu seu espírito aventureiro.</p>
+            <img src="img/queijo5.jpeg" alt="Faísca no Paiol">
+        </div>
+        <div class="highlight">
+            <h3>O Susto do Gato</h3>
+            <p>Em uma de suas aventuras, Faísca quase foi pego por um gato feroz, mas sua esperteza o salvou!</p>
+            <img src="img/parte 4.jpeg" alt="Gato assustado com Faísca">
+        </div>
+        <div class="highlight">
+            <h3>O Grande Presente</h3>
+            <p>Faísca ganhou uma mochila especial e, a partir desse momento, começou a explorar o mundo cada vez mais.
+            </p>
+            <img src="img/parte 3.jpeg" alt="Faísca ganhando uma mochila">
+        </div>
+    </section>
+
+    <!-- Seção "Por Que Ler Este Livro?" -->
+    <section class="why-read fade-in-section">
+        <h2>Por Que Ler Este Livro?</h2>
+        <ul>
+            <li>Uma história inspiradora sobre coragem e curiosidade</li>
+            <li>Ilustrações vibrantes que encantam todas as idades</li>
+            <li>Ideal para estimular o espírito aventureiro nas crianças</li>
+        </ul>
+        <button class="cta-button">Leia um Trecho</button>
+    </section>
+
+    <!-- Seção Autor -->
+    <section class="author fade-in-section">
+        <h2>Sobre o Autor</h2>
+        <p>Leonel Possatti é o criador de Faísca, o ratinho mochileiro...</p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2024 Faísca, o Ratinho Mochileiro</p>
+        <p>Contato | Política de Privacidade</p>
+    </footer>
+
+
+    <a href="https://wa.me/551234567890" target="_blank" class="whatsapp-button">Fale Conosco no WhatsApp</a>
+
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            /* Distância da parte inferior */
+            right: 20px;
+            /* Distância do lado direito */
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebc5c;
+        }
+    </style>
+
+    <script src="arquivo.js"></script>
+
+
+</body>
+
+</html>

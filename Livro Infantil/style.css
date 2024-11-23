@@ -1,0 +1,168 @@
+/* Reseta margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Animação de Fade-In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cabeçalho */
+.hero {
+    background: url('capa-do-livro.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+.cta-button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    animation: fadeIn 2.5s ease-in;
+}
+
+.cta-button:hover {
+    background-color: #ff4500;
+    transform: scale(1.1);
+}
+
+/* Seção de Introdução */
+.introduction {
+    padding: 40px 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.introduction img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+/* Seção de Destaques */
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.highlight {
+    flex: 1 1 30%;
+    max-width: 30%;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+    transition: transform 0.3s;
+}
+
+.highlight:hover {
+    transform: translateY(-10px);
+}
+
+.highlight img {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+/* Seção "Por Que Ler Este Livro?" */
+.why-read {
+    padding: 40px 20px;
+    background-color: #fffcf5;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+.why-read ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.why-read li {
+    margin: 10px 0;
+    animation: fadeIn 2.5s ease-in forwards;
+}
+
+/* Seção Autor */
+.author {
+    padding: 40px 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Efeito de Rolagem com Animação de Opacidade */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .highlight {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+}
